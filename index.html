@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>gussing number game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+
+        <div class="heading">
+            <h1>number gussing game</h1>
+        </div>
+
+        <div class="game-dis">
+            <p>try and guss the random number between 1 to 20</p>
+            <p>you have 10 attempt to guss the right number</p>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="main-section">
+            <h2>guess a number</h2>
+
+            <form action="">
+                <input type="number" id="inputField">
+                <input type="submit" id="btn" value="submit guess">
+            </form>
+
+            <span class="span-heading">previews guess : </span><span id="preview-number"></span>
+            <span class="span-heading">guessing remaining : </span><span id="remaining">10</span>
+            <span class="span-heading">hint : </span><span id="hint"></span>
+            <span id="result"></span>
+        </div>
+    </main>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #000000af;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.heading {
+    background-color: #000;
+    color: #fff;
+    padding-block: 15px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.game-dis {
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    padding-block: 20px;
+    font-size: 1.1rem;
+    line-height: 25px;
+}
+
+
+
+main {
+    display: flex;
+    height: 75vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+form input {
+    display: block;
+    padding: 10px 10px;
+    margin-block: 20px;
+    outline: none;
+    width: 100%;
+    text-align: center;
+}
+
+form input[type="submit"] {
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    text-transform: capitalize;
+    cursor: pointer;
+    background-color: #000;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    margin-block: 50px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.main-section .span-heading {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #fff;
+}
