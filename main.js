@@ -12,7 +12,6 @@ let remain = document.querySelector("#remaining").innerHTML;
 
 
 let randomNumber = Math.floor((Math.random() * 20) + 1);
-console.log(randomNumber);
 
 function preview() {
 
@@ -40,14 +39,18 @@ function hint(){
 }
 
 
+
+// this code run when user click on button......
 btn.addEventListener("click", (event) => {
     event.preventDefault();
     inputField = parseInt(inputField.value);
 
     if (inputField === randomNumber) {
+        document.querySelector("#inputField").value="";
         result.innerText = "you win the game...";
         return false;
     } else {
+        document.querySelector("#inputField").value="";
         preview();
         remaining();
         hint();
