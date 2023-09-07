@@ -1,6 +1,6 @@
 
 
-// "use strict"
+"use strict";
 
 
 let btn = document.querySelector("#btn");
@@ -14,8 +14,8 @@ let remain = document.querySelector("#remaining").innerHTML;
 let randomNumber = Math.floor((Math.random() * 20) + 1);
 
 function preview() {
-
-    document.querySelector("#preview-number").innerHTML=`${inputField},`;
+    document.querySelector("#preview-number").innerHTML = inputField;
+    return false;
 }
 
 function remaining() {
@@ -24,35 +24,40 @@ function remaining() {
         remain--;
         document.querySelector("#remaining").innerHTML = remain;
     }
-    else{
+    else {
         return false;
     }
 
 }
 
-function hint(){
-    if(inputField>randomNumber){
-        document.querySelector("#hint").innerHTML="your number is too long...";
-    }else if(inputField<randomNumber){
-        document.querySelector("#hint").innerHTML="your number is too small";
+function hint() {
+    if (inputField > randomNumber) {
+        document.querySelector("#hint").innerHTML = "your number is too long...";
+        return false;
+    } else if (inputField < randomNumber) {
+        document.querySelector("#hint").innerHTML = "your number is too small";
+        return false;
     }
 }
-
 
 
 // this code run when user click on button......
 btn.addEventListener("click", (event) => {
     event.preventDefault();
-    inputField = parseInt(inputField.value);
+    inputField = parseInt(document.querySelector("#inputField").value);
+
 
     if (inputField === randomNumber) {
-        document.querySelector("#inputField").value="";
+        document.querySelector("#inputField").value = "";
+        document.querySelector("#hint").innerHTML = "";
         result.innerText = "you win the game...";
+
         return false;
     } else {
-        document.querySelector("#inputField").value="";
         preview();
         remaining();
         hint();
+        document.querySelector("#inputField").value = "";
+        return false;
     }
 });
