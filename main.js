@@ -14,17 +14,20 @@ let remain = document.querySelector("#remaining").innerHTML;
 let randomNumber = Math.floor((Math.random() * 20) + 1);
 
 function preview() {
-    document.querySelector("#preview-number").innerHTML = inputField;
+    let num=inputField;
+    document.querySelector("#preview-number").innerHTML=num+",";
     return false;
 }
 
 function remaining() {
 
-    if (remain > 0) {
+    if (remain >0) {
         remain--;
         document.querySelector("#remaining").innerHTML = remain;
     }
     else {
+        document.querySelector("#hint").innerHTML = "";
+        document.querySelector("#result").innerHTML="The random number is = "+randomNumber;
         return false;
     }
 
@@ -35,7 +38,7 @@ function hint() {
         document.querySelector("#hint").innerHTML = "your number is too long...";
         return false;
     } else if (inputField < randomNumber) {
-        document.querySelector("#hint").innerHTML = "your number is too small";
+        document.querySelector("#hint").innerHTML = "your number is too small...";
         return false;
     }
 }
