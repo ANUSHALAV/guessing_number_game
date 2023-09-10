@@ -29,7 +29,7 @@ document.querySelector("#btn").addEventListener('click', (event) => {
         alert("please enter 1 to 20 values....");
         document.querySelector("#inputField").value = "";
     } else if (num == random) {
-        document.querySelector("#result").innerHTML = "you win the match";
+        document.querySelector("#result").innerHTML = `You Win The Game<br>`;
         document.querySelector("#inputField").disabled = true;
         document.querySelector("#btn").disabled = true;
         document.querySelector("#inputField").value = "";
@@ -42,8 +42,8 @@ document.querySelector("#btn").addEventListener('click', (event) => {
             document.querySelector("#remaining").innerHTML = remaining;
         } else {
             document.querySelector("#remaining").innerHTML = remaining;
-            document.querySelector("#result").innerHTML = "you lost the game....";
-            document.querySelector("#hint").innerHTML = "random number is = " + random;
+            document.querySelector("#hint").innerHTML = "Random Number is = " + random;
+            document.querySelector("#result").innerHTML = `<br>You Lost The Match<br>`;
             document.querySelector("#inputField").disabled = true;
             document.querySelector("#btn").disabled = true;
             document.querySelector("#start").innerHTML = "start new game";
