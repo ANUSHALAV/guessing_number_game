@@ -48,8 +48,9 @@ form input {
     display: block;
     padding: 10px 10px;
     margin-block: 20px;
-    outline: none;
+    border:none;
     width: 100%;
+    outline:none;
     text-align: center;
     background-color:#fff;
 }

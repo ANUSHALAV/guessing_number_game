@@ -12,7 +12,6 @@ function newGame() {
     document.querySelector("#preview-number").innerHTML = "";
     document.querySelector("#inputField").disabled = false;
     document.querySelector("#btn").disabled = false;
-    console.log(random);
 }
 
 
@@ -24,7 +23,12 @@ newGame();
 document.querySelector("#btn").addEventListener('click', (event) => {
     event.preventDefault();
     let num = document.querySelector("#inputField").value;
-    if (num == random) {
+    if (num.length == 0) {
+        alert("enter the number");
+    } else if (num > 20) {
+        alert("please enter 1 to 20 values....");
+        document.querySelector("#inputField").value = "";
+    } else if (num == random) {
         document.querySelector("#result").innerHTML = "you win the match";
         document.querySelector("#inputField").disabled = true;
         document.querySelector("#btn").disabled = true;
