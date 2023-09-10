@@ -51,6 +51,7 @@ form input {
     outline: none;
     width: 100%;
     text-align: center;
+    background-color:#fff;
 }
 
 form input[type="submit"] {
