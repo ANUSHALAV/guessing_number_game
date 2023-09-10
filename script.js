@@ -12,6 +12,7 @@ function newGame() {
     document.querySelector("#preview-number").innerHTML = "";
     document.querySelector("#inputField").disabled = false;
     document.querySelector("#btn").disabled = false;
+    document.querySelector("#start").classList="";
 }
 
 
@@ -34,7 +35,8 @@ document.querySelector("#btn").addEventListener('click', (event) => {
         document.querySelector("#btn").disabled = true;
         document.querySelector("#inputField").value = "";
         document.querySelector("#hint").innerHTML = "";
-        document.querySelector("#start").innerHTML = "start new game";
+        document.querySelector("#start").innerHTML =`start new game`;
+        document.querySelector("#start").classList="start";
     } else {
         let remaining = document.querySelector("#remaining").innerHTML;
         remaining = remaining - 1;
@@ -45,8 +47,10 @@ document.querySelector("#btn").addEventListener('click', (event) => {
             document.querySelector("#hint").innerHTML = "Random Number is = " + random;
             document.querySelector("#result").innerHTML = `<br>You Lost The Match<br>`;
             document.querySelector("#inputField").disabled = true;
+            document.querySelector("#inputField").value="";
             document.querySelector("#btn").disabled = true;
-            document.querySelector("#start").innerHTML = "start new game";
+            document.querySelector("#start").innerHTML =`start new game`;
+            document.querySelector("#start").classList="start";
             return false;
         }
 
